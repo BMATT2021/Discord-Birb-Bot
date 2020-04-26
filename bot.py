@@ -29,12 +29,12 @@ bot = discord.Client()
 
 @client.event
 async def on_message(message):
+    recv = message.content
     if message.author == client.user:
         return
     if message.content.startswith('!chirp'):
         msg = '*chirp chirp* {0.author.mention}'.format(message)
-        channel = client.get_channel(684920301431291986)
-        await channel.send(msg) 
+        await message.channel.send(msg) 
 
 @bot.event
 async def on_message(message):
