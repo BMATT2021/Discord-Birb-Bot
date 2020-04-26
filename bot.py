@@ -1,21 +1,11 @@
 # bot.py
 import os
 
-import discord
+import discord 
 import random 
 from dotenv import load_dotenv
 
 from discord.ext import commands
-
-bot = commands.Bot(command_prefix='!') 
-
-@commands.command()  
-async def chirp(ctx):
-    pass
-bot.add_command(chirp) 
-
-    
-    
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
