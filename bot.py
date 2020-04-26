@@ -35,7 +35,9 @@ async def on_message(message):
     if message.content.startswith('!chirp'):
         msg = '*chirp chirp* {0.author.mention}'.format(message)
         await message.channel.send(msg) 
-
+    if message.content.startswith('!youtube'):
+            msg = 'https://www.youtube.com/channel/UCxOCGpLHZCbiyopf7Arjj1g {0.author.mention}'.format(message)
+            await message.channel.send(msg)  
 @bot.event
 async def on_message(message):
     if message.author == client.user:
