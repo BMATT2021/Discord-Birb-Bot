@@ -27,6 +27,7 @@ async def on_ready():
 
 bot = discord.Client()
 
+
  
 @bot.event
 async def on_message(message):
